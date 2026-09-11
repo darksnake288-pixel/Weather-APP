@@ -1,16 +1,51 @@
-# React + Vite
-# Live URL : [Click Here](https://weather-app-t1m2.vercel.app/)
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# Weather App
 
-Currently, two official plugins are available:
+React weather client with a search UI, current conditions, and iconography. Built with Vite and Tailwind CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live demo:** [weather-app-t1m2.vercel.app](https://weather-app-t1m2.vercel.app)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- City search and current weather display
+- Icon-based condition presentation
+- Responsive layout with Tailwind CSS v4
 
-## Expanding the Oxlint configuration
+## Tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+| Area | Tools |
+| --- | --- |
+| UI | React 19 |
+| Styling | Tailwind CSS 4 |
+| Bundler | Vite 8 |
+| Icons | react-icons |
+
+## Getting started
+
+```bash
+git clone https://github.com/darksnake288-pixel/Weather-APP.git
+cd Weather-APP
+npm install
+npm run dev
+```
+
+If the app uses an external weather API, add your key where the source expects it (for example an env file). Do not commit secrets.
+
+| Script | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Production build |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run Oxlint |
+
+## Project layout
+
+```
+src/
+  App.jsx
+  components/Weather.jsx
+  assets/
+```
+
+## Author
+
+[Youssef Adel](https://github.com/darksnake288-pixel) · Frontend developer
