@@ -66,8 +66,8 @@ const WeatherCard = () => {
 
 
   return (
-    <section className="flex items-center justify-center min-h-screen bg-[#E2D9F3] p-6">
-      <div className="w-[400px] h-[600px] bg-gradient-to-b from-[#2F3CBC] via-[#3C2FA7] to-[#1E1968] rounded-[32px] shadow-2xl p-7 flex flex-col items-center justify-between text-white">
+    <section className="flex items-center justify-center min-h-screen min-h-dvh bg-[#E2D9F3] p-4 sm:p-6">
+      <div className="w-full max-w-[400px] min-h-[520px] h-[calc(100dvh-2rem)] max-h-[600px] bg-gradient-to-b from-[#2F3CBC] via-[#3C2FA7] to-[#1E1968] rounded-[32px] shadow-2xl p-5 sm:p-7 flex flex-col items-center justify-between text-white">
         
         {/* 🔍 1. حاوية البحث والزرار */}
         <div className="w-full flex gap-3 justify-center items-center mt-2">
@@ -75,11 +75,11 @@ const WeatherCard = () => {
             type="text" 
             placeholder="Search" 
             ref={inputRef}
-            className="w-full bg-[#EBFAFA] text-slate-700 placeholder-slate-400 font-medium py-3 px-6 rounded-full focus:outline-none text-base shadow-inner"
+            className="w-full min-w-0 bg-[#EBFAFA] text-slate-700 placeholder-slate-400 font-medium py-3 px-5 sm:px-6 rounded-full focus:outline-none text-base shadow-inner"
           />
           <button
             onClick={searchEngine}
-            className="bg-white text-[#2F3CBC] p-3 rounded-full flex items-center justify-center hover:bg-slate-100 transition-colors shadow-md cursor-pointer"
+            className="shrink-0 bg-white text-[#2F3CBC] p-3 rounded-full flex items-center justify-center hover:bg-slate-100 transition-colors shadow-md cursor-pointer"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
@@ -118,7 +118,7 @@ const WeatherCard = () => {
 
         {/* 💧💨 3. الجزء السفلي: تفاصيل الرطوبة والرياح */}
         {weatherData && (
-          <div className="w-full flex items-center justify-between px-2 mb-4 mt-auto">
+          <div className="w-full flex flex-wrap items-center justify-between gap-3 px-2 mb-4 mt-auto">
             <div className="flex items-center gap-2">
               <WiHumidity className="text-4xl text-slate-200" />
               <div className="flex flex-col">
